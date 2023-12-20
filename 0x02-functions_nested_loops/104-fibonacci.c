@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - prints the first 98 fiboacci numbers , starting with 1 and 2 , spearated by a comma followed by space
+ * main - prints the first 98 fiboacci numbers , starting with 1 and 2
+ * separated by a comma followed by space
  * Return: Always 0.
  */
 
