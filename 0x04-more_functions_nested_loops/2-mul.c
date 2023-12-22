@@ -4,10 +4,10 @@
  * mul - multiplies two integers
  * @a - first number to multiply
  * @b - second number to multiply
- * Return: result of a and b multiplication
+ * Return: result of a and b multiplication parameters
  */
 
 int mul(int a, int b)
 {
-	return(a * b);
+	return (a * b);
 }
