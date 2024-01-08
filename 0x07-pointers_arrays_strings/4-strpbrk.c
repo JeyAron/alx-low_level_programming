@@ -4,7 +4,7 @@
 /**
  * _strpbrk - entry point
  * @s: input
- * @accpet: input
+ * @accept: input
  * Return: Always 0 (Success)
  */
 
