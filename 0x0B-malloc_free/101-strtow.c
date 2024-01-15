@@ -32,7 +32,7 @@ int word_len(char *str)
 
 int count_words(char *str)
 {
-	int index = 0, words = 0,len = 0;
+	int index = 0, words = 0, len = 0;
 
 	for (index = 0; *(str + index); index++)
 	len++;
@@ -51,7 +51,7 @@ int count_words(char *str)
 /**
  * strtow - splits string into words.
  * @str: the string to be split
- * Return: if str, NULL; str = "", or function fails, NULL; otherwise, a
+ * Return: if str, NULL, str = "", or function fails, NULL. Otherwise, a
  * pointer to an array of strings.
  */
 
@@ -90,7 +90,6 @@ char **strtow(char *str)
 	}
 	for (l = 0; l < letters; l++)
 	strings[w][l] = str[index++];
-	
 	strings[w][l] = '\0';
 	}
 	strings[w] = NULL;
