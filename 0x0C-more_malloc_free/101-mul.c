@@ -52,7 +52,7 @@ char *create_xarray(int size)
 }
 
 /**
- * iterate_zeroes - iterates throught a string of numbers containing 
+ * iterate_zeroes - iterates throught a string of numbers containing
  * leading zeroes until it hits a nn-zero integere
  * @str: the string of numbers to be iterated
  * Return: a pointer to the next non-zero element
@@ -216,7 +216,7 @@ int main(int argc, char *argv[])
 	{
 	digit = get_digit(*(argv[2] + index));
 	get_prod(next_prod, argv[1], digit, zeroes++);
-	add_nums(final_prod, next_prod, size -1);
+	add_nums(final_prod, next_prod, size - 1);
 	}
 	for (index = 0; final_prod[index]; index++)
 	{
