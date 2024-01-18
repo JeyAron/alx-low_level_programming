@@ -5,7 +5,7 @@
  * string_nconcat - concatenates two strings while second string is an n value
  * @s1: first string
  * @s2: second string
- * @n1: number of elements to concatenate
+ * @n: number of elements to concatenate
  * Return: a pointer to the new allocated memory
  */
 
