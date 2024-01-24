@@ -11,7 +11,7 @@
 void print_opcodes(char *a, int bytes)
 {
 	int index;
-	
+
 	for (index = 0; index < bytes; index++)
 	{
 	printf("%.2hhx", a[index]);
