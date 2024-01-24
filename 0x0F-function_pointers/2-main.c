@@ -35,6 +35,7 @@ int abs_is_98(int elem)
     return (elem == 98 || -elem == 98);
 }
 
+int int_index(int *array, int size, int (*cmp)(int));
 /**
  * main - check the code
  *

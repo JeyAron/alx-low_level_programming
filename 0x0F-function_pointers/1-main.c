@@ -23,6 +23,7 @@ void print_elem_hex(int elem)
     printf("0x%x\n", elem);
 }
 
+void array_iterator(int *array, size_t size, void (*action)(int));
 /**
  * main - check the code
  *
