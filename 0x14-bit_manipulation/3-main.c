@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include "main.h"
 
-int set_bit(unsigned long int *n, unsigned int index);
-
 /**
  * main - check the code
  *

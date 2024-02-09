@@ -1,7 +1,5 @@
 #include "main.h"
 
-int _putchar(char c);
-
 /**
  * _pow - calculates (base ^ power)
  * @base: base of the exponent
