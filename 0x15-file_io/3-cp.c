@@ -17,7 +17,7 @@ void check_IO_stat(int stat, int fd, char *filename, char mode);
 int main(int argc, char *argv[])
 {
 	int arc, n_read = 1024, dest, wrote, close_arc, close_dest;
-	unsigned int mode = S_IRUSR | S_IWUSR |S_IRGRP | S_IWGRP | S_IROTH;
+	unsigned int mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 	char buffer[1024];
 
 	if (argc != 3)
@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 	check_IO_stat(-1, -1, argv[2], 'W');
 	}
 	close_arc = close(arc);
-	check_IO_stat(close_arc, arc, NULL,'C');
+	check_IO_stat(close_arc, arc, NULL, 'C');
 	close_dest = close(dest);
 	check_IO_stat(close_dest, dest, NULL, 'C');
 	return (0);
