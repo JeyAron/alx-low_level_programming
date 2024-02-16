@@ -257,7 +257,7 @@ void close_elf(int elf)
 }
 
 /**
- * main - displays the information contained in the ELF header 
+ * main - displays the information contained in the ELF header
  * @argc: number of arguments supplied
  * @argv: array of pointers to the arguments
  * Return: Success, 0
