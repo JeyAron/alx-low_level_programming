@@ -2,7 +2,7 @@
 
 /**
  * puts2 - pritns every other character of a string
- * @str - te string to be treated
+ * @str: the string to be treated
  * Return: void
  */
 
