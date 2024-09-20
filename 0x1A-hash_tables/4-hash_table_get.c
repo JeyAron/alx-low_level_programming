@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 
 /**
-*hash_table_get - retrive value corresponding to key 
+*hash_table_get - retrive value corresponding to key
 *@ht: hash table
 *@key: key used for hashing
 *Return: value on success otherwise nuil
