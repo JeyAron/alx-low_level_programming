@@ -2,7 +2,6 @@
 
 /**
  * hash_table_create - creates a hash table with a given size
- *
  * @size: size of the hash table
  * Return: the created hash table, or NULL if function fails
  */
@@ -26,8 +25,8 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	table->array = array;
 	table->size = size;
-	table->shead = NULL;
-	table->stail = NULL;
+	table->head = NULL;
+	table->tail = NULL;
 
 	return (table);
 }
@@ -83,7 +82,7 @@ void add_i_hash(hash_table_t *ht, hash_node_t *new)
 	hash_node_t *tmp1, *tmp2;
 	int ret;
 
-	tmp1 = tmp2 = ht->shead;
+	tmp1 = tmp2 = ht->head;
 
 	while (tmp1 != NULL)
 	{
@@ -94,31 +93,31 @@ void add_i_hash(hash_table_t *ht, hash_node_t *new)
 		}
 		else if (ret < 0)
 		{
-			new->sprev = tmp1->sprev;
+			new->prev = tmp1->prev;
 
-			if (tmp1->sprev)
-				tmp1->sprev->snext = new;
+			if (tmp1->prev)
+				tmp1->prev->next = new;
 			else
-				ht->shead = new;
+				ht->head = new;
 
-			tmp1->sprev = new;
-			new->snext = tmp1;
+			tmp1->prev = new;
+			new->next = tmp1;
 
 			return;
 		}
 		tmp2 = tmp1;
-		tmp1 = tmp1->snext;
+		tmp1 = tmp1->next;
 	}
 
-	new->sprev = tmp2;
-	new->snext = NULL;
+	new->prev = tmp2;
+	new->next = NULL;
 
-	if (ht->shead)
-		tmp2->snext = new;
+	if (ht->head)
+		tmp2->next = new;
 	else
-		ht->shead = new;
+		ht->head = new;
 
-	ht->stail = new;
+	ht->tail = new;
 }
 
 /**
@@ -200,7 +199,7 @@ void hash_table_print(const hash_table_t *ht)
 	printf("{");
 	sep = "";
 
-	tmp = ht->shead;
+	tmp = ht->head;
 
 	while (tmp != NULL)
 	{
